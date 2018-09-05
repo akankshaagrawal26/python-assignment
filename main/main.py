@@ -1,4 +1,5 @@
 from pages.daily_status_report import DailyStatusReport
+from pages.read_file import ReadStatus
 
 
 class Main:
@@ -12,13 +13,17 @@ class Main:
         dsr = DailyStatusReport()       # Creating object 'dsr' of DailyStatusReport class
         headers = dsr.get_headers()
         data = dsr.get_data()
-        final_list = dsr.write_file(headers, data)
-        dsr.send_mail(final_list)
+        dsr_input_data = dsr.write_file(headers, data)
+        dsr.send_mail(dsr_input_data)
 
 
 # Creating object 'mainObj' to call main Function
 mainObj = Main()
 mainObj.main()
+
+# Send email for still In-Progress task
+rs = ReadStatus()
+rs.read_file()
 
 
 

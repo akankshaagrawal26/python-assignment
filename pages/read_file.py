@@ -34,9 +34,6 @@ class ReadStatus:
         print("In-progress list:", in_progress_list)
 
         # Call to send_mail function for sending In-Progress Status Report
-        dsr.send_mail(in_progress_list)
+        dsr.send_mail(in_progress_list, "In-progress")
 
 
-# Creating object 'read_status' to call read_file Function of ReadStatus class
-read_status = ReadStatus()
-read_status.read_file()

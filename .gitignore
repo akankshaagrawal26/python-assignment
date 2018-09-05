@@ -1,0 +1,9 @@
+dist
+.pydistutils.cfg
+.bash_history
+
+# ----------------------------------------------- IDE / Project / Package
+
+.idea/
+*.pyc
+
